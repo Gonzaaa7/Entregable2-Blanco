@@ -1,8 +1,20 @@
 // arrays y variables Globales
 let num = 1
-const inventario = ["Palo de madera","lanza"]
-let arma = ""
-
+const armas = {
+    paloDeMadera : { nombre :"Palo de Madera", daño : 15, alcance : 30,velocidad: 80, defensivo: false},
+    escudoDeMadera : { nombre :"Escudo de Madera", defensa : 40, duracion : 30, defensivo: true},
+    lanza : {nombre :"Lanza Comun", daño : 40, alcance : 100,velocidad: 55, defensivo: false},
+    lanzadeGuerra : {nombre :"Lanza De Guerra", daño : 60, alcance : 90,velocidad: 50, defensivo: false},
+    mazo : {nombre :"Mazo", daño : 100, alcance : 30, velocidad: 20, defensivo: false},
+    scimitarra : {nombre :"Scimitarra", daño : 80, alcance : 70, velocidad: 90, defensivo: false},
+    escudoNordico : { nombre :"Escudo Nordico", defensa : 80, duracion : 90, defensivo: true},
+}
+const slot1 = document.querySelector('.Espacio1')
+const slot2 = document.querySelector('.Espacio2')
+const slot3 = document.querySelector('.Espacio3')
+const slot4 = document.querySelector('.Espacio4')
+slot1.innerText = armas.paloDeMadera.nombre;
+slot2.innerText= armas.escudoDeMadera.nombre;
 // Funciones del menu
 function imprimirInventario(){
     inventario.forEach(function(arma,i){

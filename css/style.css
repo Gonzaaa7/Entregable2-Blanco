@@ -1,39 +1,72 @@
-body {
-    background-color: cyan;
-}
-h3 {
-    color: rgb(6, 5, 6);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 40px;
-    border-color: rgb(7, 10, 9);
-    border-style:solid;
-    margin: auto;
-    justify-content: center;
-    text-align: center;
-    width: 60%;
-    margin-bottom: 10%;
-    margin-top: 5%;
-    background-color: rgba(27, 34, 34, 0.303);
-}
-.Espacio {
-    color: rgb(6, 5, 6);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 30px;
-    border-color: rgb(7, 10, 9);
-    border-style:solid;
-    width: 50%;
-    margin-bottom: 5%;
-    margin-left: 25%;
-    background-color: rgba(0, 0, 0, 0.425);
-    text-align: center;
-    
-}
-div {
-    width: 50%;
-    height: 500px;
-    background-color: rgb(109, 118, 118);
-    display: inline-block;
-    border: dashed,4px,black;
-    margin-left: 25%;
-    margin-top: 5%;
-}
+
+    body {
+      background-color: cyan;
+      margin: 0;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    h3 {
+      margin: 0 0 10px 0;
+      padding: 10px;
+      font-size: 40px;
+      text-align: center;
+      width: 100%;
+      background-color: rgba(27, 34, 34, 0.303);
+      border: 2px solid rgb(7, 10, 9);
+      color: rgb(6, 5, 6);
+      box-sizing: border-box;
+    }
+
+    .contenedor {
+      background-color: rgb(109, 118, 118);
+      border: 4px dashed black;
+      width: 50%;
+      margin: 1% auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      height: 98vh;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+
+    .cajita {
+      width: 80%;
+      flex: 0 0 12%;
+      border: 1px solid #333;
+      box-sizing: border-box;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      text-align: center;
+      padding: 0 10px;
+    }
+
+    /* Contenedor de botones */
+    .botones {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 15px;           /* espacio entre botones */
+      margin-top: 20px;
+      flex-wrap: wrap;     /* que bajen si no hay espacio */
+    }
+
+    .botones button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: 2px solid #333;
+      border-radius: 5px;
+      background-color: #f5f5f5;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+
+    .botones button:hover {
+      background-color: #ddd;
+      transform: translateY(-2px);
