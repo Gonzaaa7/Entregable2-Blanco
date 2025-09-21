@@ -9,14 +9,41 @@ const armas = {
     scimitarra : {nombre :"Scimitarra", daño : 80, alcance : 70, velocidad: 90, defensivo: false},
     escudoNordico : { nombre :"Escudo Nordico", defensa : 80, duracion : 90, defensivo: true},
 }
-const slot1 = document.querySelector('.Espacio1')
-const slot2 = document.querySelector('.Espacio2')
-const slot3 = document.querySelector('.Espacio3')
-const slot4 = document.querySelector('.Espacio4')
+const selec = document.querySelector('#boton1')
+const tirar = document.querySelector('#boton2')
+const cambiar = document.querySelector('#boton3')
+const crear = document.querySelector('#boton4')
+
+ const slots = document.querySelectorAll('.cajita');
+ let i = 0;
+ let actualCajita= slots[i];
+ actualCajita.style.backgroundColor = 'grey';
+//iniciar Inventario
+const slot1 = document.querySelector('#Espacio1')
+const slot2 = document.querySelector('#Espacio2')
+const slot3 = document.querySelector('#Espacio3')
+const slot4 = document.querySelector('#Espacio4')
 slot1.innerText = armas.paloDeMadera.nombre;
 slot2.innerText= armas.escudoDeMadera.nombre;
-// Funciones del menu
-function imprimirInventario(){
+// Funciones de botonera
+
+selec.addEventListener('click', function() {
+    actualCajita.style.backgroundColor = 'white';
+    if (i == 3){
+        i=0;
+    } else i++;
+    actualCajita = slots[i];
+    actualCajita.style.backgroundColor = 'grey';
+  });
+
+  tirar.addEventListener('click', function(){
+    if (actualCajita.textContent == 'Slot vacio') {
+        alert("")
+    }
+    actualCajita.innerText = 'Slot vacio';
+  });
+
+/*function imprimirInventario(){
     inventario.forEach(function(arma,i){
         console.log(`Slot ${i}: ${arma}`)
     })
@@ -68,3 +95,4 @@ while (num !== "0"){
         default : alert("Selecion erronea")
     }
 }
+*/
